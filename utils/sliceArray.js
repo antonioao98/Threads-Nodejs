@@ -1,8 +1,10 @@
 function getPartsOfArray(array, threads) {
-  if (Number.isNaN(array.length / threads) || threads > array.length) {
+  if (Number.isNaN(array.length / threads) ) {
     console.log('could not be run');
+    return false
+  }else if(threads > array.length){
+    return array
   } else {
-    const resultDivision = array.length / threads;
     const resultRestDivision = array.length % threads;
     const resultDivisionInt = parseInt(array.length / threads);
 
@@ -21,13 +23,6 @@ function getPartsOfArray(array, threads) {
       }
     }
     return newArray
-    //console.log(newArray);
-    console.log({
-      newArrayLength: newArray.length,
-      resultDivision,
-      resultDivisionInt,
-      resultRestDivision,
-    });
   }
 }
 

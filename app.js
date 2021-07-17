@@ -3,7 +3,6 @@ const {
   findAllPerQuery: findListItems,
   update,
 } = require('./repository/listItem');
-const connect = require('./db/connect');
 
 async function getListItems(listItems, thread, threadPosition) {
   try {

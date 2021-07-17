@@ -64,6 +64,7 @@ async function getListItems() {
     return await Promise.all(promises)
       .then(() => {
         console.log('ListItems atualizado com sucesso !');
+        connect.disconnect()
         return 1;
       })
       .catch(erro => {
