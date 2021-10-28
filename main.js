@@ -48,7 +48,7 @@ async function start() {
           {
             workerData: {
               position: i,
-              data: arrayThreads,
+              data: arrayThreads.length < cpu ? arrayThreads : arrayThreads[i], 
               arr: sharedArray,
             },
           },
